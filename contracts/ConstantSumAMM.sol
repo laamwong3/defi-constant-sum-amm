@@ -40,7 +40,7 @@ contract ConstantSumAMM {
         returns (uint amountOut)
     {
         // check if it's valid token
-        if (_tokenIn != address(tokenA) || _tokenIn != address(tokenB)) {
+        if (_tokenIn != address(tokenA) && _tokenIn != address(tokenB)) {
             revert ConstantSumAMM__InvalidToken();
         }
 
